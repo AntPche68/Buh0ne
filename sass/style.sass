@@ -1,0 +1,369 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	
+$accent: #005FA3
+$grey: #EBEBEB
+
+@import '_header'
+
+body
+	font-family: 'Lato'
+	overflow-x: hidden
+
+h1,h2
+	font-family: 'Merriweather'
+	font-weight: 900
+h1
+	font-size: 48px
+	line-height: 110px
+h2
+	font-size: 48px
+	line-height: 69px
+	color: #333333
+	margin-bottom: 40px
+h3
+	font-size: 24px
+	line-height: 33px
+	color: #BDBDBD
+	font-family: 'Lato'
+	font-style: normal
+	font-weight: 600
+	margin-bottom: 10px
+.wrap
+	max-width: 1110px
+	margin: 0 auto
+
+.grey-bg
+	background-color: #E5E5E5
+	padding: 140px 0
+.white-bg
+	padding: 140px 0
+.max
+	width: 100%
+	height: 670px
+	.swiper-slide
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/main.png)
+		height: 100%
+		width: 100%
+		background-size: cover
+		background-position: center
+		position: relative
+		&::after
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(0, 0, 0, 0.3)
+			z-index: 10
+		.wrap
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			p
+				font-family: 'Merriweather'
+				font-style: normal
+				font-weight: 300
+				font-size: 48px
+				line-height: 66px
+				color: #FFFFFF
+				max-width: 589px
+			.btn-slide
+				background-color: $accent
+				width: 270px
+				height: 60px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #fff
+				text-decoration: none
+				font-weight: 400
+				font-size: 18px
+				line-height: 25px
+				margin-top: 80px
+	.control-swiper
+		max-width: 1100px
+		margin: 0 auto
+		position: relative
+	.swiper-button-next, .swiper-button-prev
+		bottom: 80px
+		width: 60px
+		height: 60px
+		background-color: rgba(255, 255, 255, 0.4)
+		margin-top: auto
+	.swiper-button-prev
+		right: 80px
+		left: auto
+	.swiper-button-next:after, .swiper-button-prev:after
+		font-size: 12px
+		color: #fff
+	.swiper-button-disabled
+		opacity: 1
+		background-color: rgba(255, 255, 255, 0.3)
+	.swiper-pagination
+		width: auto
+		bottom: 80px
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+		margin: 0 15px
+	.swiper-pagination-bullet
+		background-color: #fff
+
+.block-grid
+	display: grid
+	gap: 30px
+	&.services
+		grid-template-columns: minmax(350px, max-content) repeat(auto-fill, 350px)
+		.block-grid_item
+			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../media/service.png)
+			height: 360px
+			display: flex
+			align-items: end
+			padding: 45px
+			background-size: cover
+			background-position: center
+			&:hover
+				background-image: linear-gradient(0deg, rgba(0, 95, 163, 0.4), rgba(0, 95, 163, 0.4)), url(../media/service.png)
+			p
+				font-family: 'Lato'
+				font-style: normal
+				font-weight: 900
+				font-size: 24px
+				line-height: 30px
+				color: #FFFFFF
+
+.two-column
+	display: flex
+	justufy-content: space-between
+	.left_column
+		width: 50%
+		.company-name
+			span
+				color: $accent
+		p
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+			max-width: 445px
+	.about
+		grid-template-columns: repeat(2, 255px)
+		.block-grid_item
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 255px
+			background-color: $grey
+			padding: 30px 69px 40px 40px
+			transition: color 0.5s ease, background-color 0.5s ease
+			&:hover
+				background-color: $accent
+				color: #fff
+				a
+					color: #fff
+		.number
+			font-weight: 900
+			font-size: 55px
+			line-height: 66px
+			letter-spacing: 0.1em
+			text-transform: uppercase
+			&+p
+				font-weight: 700
+				font-size: 14px
+				line-height: 18px
+				&+a
+					font-weight: 700
+					font-size: 14px
+					line-height: 17px
+					color: $accent
+					text-decoration-line: underline
+
+.clients
+	width: 100%
+	height: 200px
+	.swiper-wrapper
+		// max-width: 80%
+		.swiper-slide
+			display: flex
+			gap: 30px
+			img
+				height: 100px
+				object-fit: cover
+	.swiper-button-next, .swiper-button-prev
+		bottom: 0
+		width: 60px
+		height: 60px
+		background-color: $accent
+		margin-top: auto
+	.swiper-button-prev
+		right: 80px
+		left: auto
+	.swiper-button-next:after, .swiper-button-prev:after
+		font-size: 12px
+		color: #fff
+	.swiper-pagination
+		width: auto
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+		margin: 0 15px
+	.swiper-pagination-bullet
+		background-color: $accent
+
+.reviews
+	height: 470px
+	.swiper-wrapper
+		height: auto
+	.swiper-slide
+		display: flex
+		flex-wrap: wrap
+		align-self: stretch
+		background-color: $grey
+		padding: 45px 95px
+		p
+			font-family: 'Lato'
+			font-style: normal
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+	.persona
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 320px
+		margin-top: 40px
+		.photo
+			background-image: url(../media/clients.png)
+			background-size: cover
+			background-position: center
+			width: 80px
+			height: 80px
+			border-radius: 50%
+		.name-persona
+			font-weight: 900
+			font-size: 18px
+			line-height: 25px
+		.description-persona
+			font-size: 14px
+			line-height: 19px
+			color: #4F4F4F
+	.swiper-button-next, .swiper-button-prev
+		bottom: 0
+		width: 60px
+		height: 60px
+		background-color: $accent
+		margin-top: auto
+	.swiper-button-prev
+		right: 80px
+		left: auto
+	.swiper-button-next:after, .swiper-button-prev:after
+		font-size: 12px
+		color: #fff
+	.swiper-button-next, .swiper-rtl .swiper-button-prev
+		right: 0
+	.swiper-pagination
+		width: auto
+		height: 20px
+		left: -10px
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 15px
+	.swiper-pagination-bullet
+		background-color: $accent
+
+@import '_footer'
+
+@media screen and (max-width: 1100px)
+	.wrap
+		width: 90%
+	#about .wrap
+		flex-wrap: wrap
+@media screen and (max-width: 992px)
+	.wrap
+		width: 80%
+	.mobile-menu
+		display: block
+	header .wrap .header_menu
+		display: none
+	.block-grid
+		display: grid
+		gap: 30px
+		&.services
+			grid-template-columns: minmax(100%, max-content)
+	.reviews
+		height: 60vh
+		.swiper-slide
+			padding: 40px
+		.persona
+			display: none
+	.two-column
+		flex-wrap: wrap
+		.right_column, .left_column
+			width: 100%
+		.about
+			grid-template-columns: 1fr
+			margin-top: 40px
+			.block-grid_item
+				height: 120px
+				flex-direction: row
+				align-items: flex-end
+				padding: 20px 20px 30px 20px
+				.number
+					line-height: 50px
+				p
+					max-width: 140px
+
+	header .menu
+		position: absolute
+		display: none
+		top: 156px
+		width: 300px
+		right: 0
+		height: 70vh
+		flex-direction: column
+		background-color: #fff
+		padding: 20px 0
+		z-index: 9999
+		&.active
+			display: flex
+			right: 0
+		.points
+			flex-direction: column
+			width: auto
+			li
+				text-align: center
+				a
+					width: 100%
+			li + li
+				margin-top: 40px
+				margin-left: 0
+	.mobile
+		display: block
+	#contacts
+		.wrap
+			flex-wrap: wrap
+			justify-content: center
+			.left_column
+				padding: 0
+				margin-bottom: 40px
+			.right_column
+
+@media screen and (max-width: 640px)
+	h2
+		font-size: 1.7rem
+	.max
+		.swiper-slide .wrap p
+			font-size: 2.5rem
+		.control-swiper
+			max-width: 80%
+		.swiper-pagination, .swiper-button-prev, .swiper-button-next
+			bottom: 50px
+	.reviews
+		height: 100vh
+	#contacts
+		form, .field, .form_up, .icon_info
+			flex-wrap: wrap
+		.left_column
+			padding: 0
+			input
+				width: 100%

@@ -1,0 +1,81 @@
+#contacts
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../media/main.png)
+	background-position: center
+	color: white
+	padding: 120px 0
+	h2
+		color: #fff
+
+	.wrap
+		display: flex
+		justify-content: space-between
+
+	form
+		display: flex
+		grid-gap: 40px
+		justify-content: right
+		flex-wrap: wrap
+		flex-direction: column
+		.form_up
+			display: flex
+			grid-gap: 40px
+		.field
+			display: flex
+			flex-direction: column
+			textarea
+				height: 100px
+
+		input, textarea
+			background-color: transparent
+			font-family: 'Lato', sans-serif
+			border: none
+			border-bottom: 1px solid #fff
+			font-weight: 300
+			font-size: 21px
+			line-height: 29px
+			color: #BDBDBD
+			padding: 5px 0
+	button
+		background-color: $accent
+		border: none
+		color: #fff
+		font-size: 18px
+		line-height: 25px
+		text-align: center
+		padding: 20px
+		width: 234px
+		align-self: flex-end
+	.left_column
+		padding-right: 150px
+		p
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+			margin-bottom: 50px
+		.icon_info
+			width: 100%
+			display: flex
+			justify-content: space-between
+			a
+				color: white
+				text-decoration: none
+				font-weight: 300
+				font-size: 21px
+				line-height: 29px
+				&:first-child::before
+					content: '📱'
+					margin-right: 5px
+					font-style: 35px
+				&:last-child::before
+					content: '✉'
+					margin-right: 5px
+					font-size: 35px
+footer
+	padding: 30px
+	.wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 300
+		font-size: 14px
+		line-height: 19px
